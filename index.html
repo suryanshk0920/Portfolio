@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/9d5be74e30.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -40,26 +41,122 @@
             <div class="about-col-2">
               <h1 class="subtitle">About Me</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam itaque corporis nulla possimus asperiores omnis impedit quae dolore, quos dolores quasi ipsa velit accusantium rerum quidem! Suscipit aperiam sequi exercitationem quae! Numquam autem fuga mollitia explicabo minima quae eius repudiandae harum ducimus, vero ea enim illo, maxime totam placeat porro officia recusandae delectus eum nisi dolore repellat inventore? Recusandae provident reiciendis tempore amet dolorum id suscipit non veniam molestias a maxime sed minus ipsum, labore deleniti quidem blanditiis culpa?</p>
-              
+
               <div class="tabtitles">
-                <p class="tab-links active-link">Skills</p>
-                <p class="tab-links">Experience</p>
-                <p class="tab-links">Education</p>
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
               </div>
 
-              <div class="tab-contents">
+              <div class="tab-contents active-tab" id="skills">
                 <ul>
                   <li><span>UI/UX</span><br>Designing Web App Interfaces</li>
                   <li><span>Web Development</span><br>Designing Web Apps</li>
                   <li><span>Software Development</span><br>Designing Softwares and Apps</li>
                 </ul>
               </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span>2021 - Current</span><br>Studying BCA and Web Development.</li>
+                  <li><span>2019 - 2021</span><br>Working as an SDE at Google.</li>
+                  <li><span>2016 - 2019</span><br>Preparing For Neet</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li><span>2016 - 2019</span><br>Completed High School</li>
+                  <li><span>2019 - 2021</span><br>Freelancing</li>
+                  <li><span>2021 - 2023</span><br>Graduated in BCA from Parul University</li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+<!-- ----------------------------services--------------------------------- -->
+<div id="services"></div>
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos ullam ratione consectetur dolor minima quasi in perferendis nemo totam accusamus?</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-sharp fa-solid fa-crop-simple"></i>
+            <h2>UI/UX Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos ullam ratione consectetur dolor minima quasi in perferendis nemo totam accusamus?</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-android"></i>
+            <h2>App Development</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos ullam ratione consectetur dolor minima quasi in perferendis nemo totam accusamus?</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- ----------------portfolio------------------ -->
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="worklist">
+          <div class="work">
+            <img src="app.jpeg" alt="">
+            <div class="layer">
+              <h3>Weather App</h3>
+              <p>This App uses OpenWeather API to show the temperature according to your location.</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="app.jpeg" alt="">
+            <div class="layer">
+            <h3>Doodle App</h3>
+            <p>This is a smart board app with integrated AI functionality which can draw with speech.</p><a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          </div>
+          <div class="work">
+            <img src="app.jpeg" alt="">
+            <div class="layer">
+            <h3>Social Media Clone</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, soluta?</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
+
+
+
+
+
+
+
+  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
   <script>
