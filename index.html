@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <!-- <img src="logo.png" class="logo" alt="Suryansh"> -->
+        <div class="logo"><span id="letter">S</span>uryansh's Portfolio</div>
+        <ul>
+          <!-- <li>Suryansh</li> -->
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <div>Hi, My name is <span id="span-text">Suryansh</span></div>
+        <!-- <div>Suryansh</div> -->
+        <div>and I am a</div>
+        <!-- <div>Web Developer</div> -->
+        <span id="element"></span>
+      </div>
+<!-- ----------------about------------------>
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="user.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+              <h1 class="subtitle">About Me</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam itaque corporis nulla possimus asperiores omnis impedit quae dolore, quos dolores quasi ipsa velit accusantium rerum quidem! Suscipit aperiam sequi exercitationem quae! Numquam autem fuga mollitia explicabo minima quae eius repudiandae harum ducimus, vero ea enim illo, maxime totam placeat porro officia recusandae delectus eum nisi dolore repellat inventore? Recusandae provident reiciendis tempore amet dolorum id suscipit non veniam molestias a maxime sed minus ipsum, labore deleniti quidem blanditiis culpa?</p>
+              
+              <div class="tabtitles">
+                <p class="tab-links active-link">Skills</p>
+                <p class="tab-links">Experience</p>
+                <p class="tab-links">Education</p>
+              </div>
+
+              <div class="tab-contents">
+                <ul>
+                  <li><span>UI/UX</span><br>Designing Web App Interfaces</li>
+                  <li><span>Web Development</span><br>Designing Web Apps</li>
+                  <li><span>Software Development</span><br>Designing Softwares and Apps</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer.', 'UI/UX Designer.', 'Tech Enthusiast.'],
+      typeSpeed: 50,
+    });
+  </script>
+</body>
+
+</html>
