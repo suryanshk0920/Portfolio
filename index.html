@@ -22,7 +22,9 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
+          <i class="burg fa-regular fa-circle-xmark"></i>
         </ul>
+        <i class="burg fa-solid fa-bars"></i>
       </nav>
       <div class="header-text">
         <div>Hi, My name is <span id="span-text">Suryansh</span></div>
@@ -153,12 +155,14 @@
             <form>
               <input type="text" name="Name" placeholder="Your Name" required>
               <input type="email" name="email" placeholder="Your Email" required>
-              <textarea type="Message" rows="6" placeholder="Your Message">
-              </textarea>
-              <button type="submit">Submit</button>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
             </form>
           </div>
         </div>
+      </div>
+      <div class="copyright">
+        <p><p>Copyright &copy; <span id="currentYear"></span> Suryansh Kumar. All rights reserved.</p></p>
       </div>
     </div>
   </div>
@@ -197,6 +201,10 @@
       typeSpeed: 50,
     });
   </script>
+  <script>
+    document.getElementById("currentYear").innerText = new Date().getFullYear();
+</script>
+
 </body>
 
 </html>
