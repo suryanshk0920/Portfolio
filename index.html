@@ -14,7 +14,7 @@
     <div class="container">
       <nav>
         <!-- <img src="logo.png" class="logo" alt="Suryansh"> -->
-        <div class="logo"><span id="letter">S</span>uryansh's Portfolio</div>
+        <div class="logo"><span id="letter">S</span>uryansh.</div>
         <ul>
           <!-- <li>Suryansh</li> -->
           <li><a href="#">Home</a></li>
@@ -22,9 +22,9 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
-          <i class="burg fa-regular fa-circle-xmark"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
         </ul>
-        <i class="burg fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars"></i>
       </nav>
       <div class="header-text">
         <div>Hi, My name is <span id="span-text">Suryansh</span></div>
@@ -161,6 +161,7 @@
           </div>
         </div>
       </div>
+      <button onclick="scrollToTop()" class="back-to-top" id="backToTopBtn"><i class="fa-solid fa-angle-up"></i></button>
       <div class="copyright">
         <p><p>Copyright &copy; <span id="currentYear"></span> Suryansh Kumar. All rights reserved.</p></p>
       </div>
@@ -203,6 +204,27 @@
   </script>
   <script>
     document.getElementById("currentYear").innerText = new Date().getFullYear();
+</script>
+
+<script>
+  // Function to scroll to the top of the page
+  function scrollToTop() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // Smooth scroll animation
+      });
+  }
+
+  // Show/hide the back-to-top button based on scroll position
+  window.addEventListener('scroll', function() {
+      var backToTopBtn = document.getElementById('backToTopBtn');
+
+      if (window.scrollY > 300) { // Adjust this value to control when the button appears
+          backToTopBtn.style.display = 'block';
+      } else {
+          backToTopBtn.style.display = 'none';
+      }
+  });
 </script>
 
 </body>
