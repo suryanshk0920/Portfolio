@@ -3,6 +3,11 @@
 /* ── RESET ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 :root {
   --bg: #050505;
   --text: #ffffff;
@@ -319,6 +324,7 @@ a { color: inherit; text-decoration: none; }
 .about-left .section-header { margin-bottom: 2rem; }
 .about-img-wrap {
   width: 420px; height: 420px;
+  max-width: 90vw; max-height: 90vw;
   border-radius: 50%; overflow: hidden;
   position: relative;
   border: 1px solid var(--border);
@@ -458,5 +464,6 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: rotate(-45deg) translat
   .nav-toggle { display: flex; mix-blend-mode: difference; }
   .hero-title { letter-spacing: -1px; }
   .work-item-tags { display: none; }
+  .about-img-wrap { width: min(420px, 85vw); height: min(420px, 85vw); }
   footer { flex-direction: column; gap: 8px; text-align: center; }
 }
