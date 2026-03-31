@@ -32,6 +32,7 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
 
   <!-- ── HERO ── -->
   <section id="hero">
@@ -83,7 +84,13 @@
 
     <div class="work-list">
 
-      <div class="work-item" data-index="01">
+      <div class="work-item" data-index="01"
+        data-title="Event Tracker"
+        data-cat="Full-Stack · Web App"
+        data-desc="A comprehensive college event management system with QR code-based attendance. Students scan a QR to check in, organizers get real-time attendance stats, and faculty can filter and export reports. Built with role-based access for students, faculty, organizers, and admins."
+        data-stack="Next.js,Node.js,PostgreSQL,Redis,JWT,TypeScript"
+        data-link="https://github.com/suryanshk0920/event-tracker"
+        data-img="assets/image.png">
         <div class="work-item-left">
           <span class="work-num">01</span>
           <div>
@@ -94,13 +101,19 @@
         <div class="work-item-tags">
           <span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>Redis</span>
         </div>
-        <a href="https://github.com/suryanshk0920/event-tracker" target="_blank" class="work-arrow">↗</a>
+        <span class="work-arrow">↗</span>
         <div class="work-preview">
           <img src="assets/image.png" alt="Event Tracker">
         </div>
       </div>
 
-      <div class="work-item" data-index="02">
+      <div class="work-item" data-index="02"
+        data-title="Crop Disease Detector"
+        data-cat="AI/ML · Computer Vision"
+        data-desc="An AI-powered plant disease detection system. A farmer photographs a leaf, the model identifies the disease and recommends treatment — instantly. Puts a plant pathologist in every farmer's pocket. Built to work in the field, not just in a notebook."
+        data-stack="Python,TensorFlow,OpenCV,Flask,Computer Vision"
+        data-link=""
+        data-img="assets/crop.jpeg">
         <div class="work-item-left">
           <span class="work-num">02</span>
           <div>
@@ -111,13 +124,19 @@
         <div class="work-item-tags">
           <span>Python</span><span>Computer Vision</span><span>ML</span>
         </div>
-        <span class="work-arrow" style="cursor:default;opacity:0.3;">↗</span>
+        <span class="work-arrow">↗</span>
         <div class="work-preview">
           <img src="assets/crop.jpeg" alt="Crop Disease Detector">
         </div>
       </div>
 
-      <div class="work-item" data-index="03">
+      <div class="work-item" data-index="03"
+        data-title="Weather App"
+        data-cat="Frontend · API Integration"
+        data-desc="A clean, real-time weather app that fetches live conditions for any city using a weather API. Displays temperature, humidity, wind speed and conditions with a minimal UI."
+        data-stack="JavaScript,REST API,HTML,CSS"
+        data-link="https://suryanshk0920.github.io/weather-app/"
+        data-img="assets/app.jpeg">
         <div class="work-item-left">
           <span class="work-num">03</span>
           <div>
@@ -134,7 +153,13 @@
         </div>
       </div>
 
-      <div class="work-item" data-index="04">
+      <div class="work-item" data-index="04"
+        data-title="Search Engine Clone"
+        data-cat="Frontend · UI"
+        data-desc="A pixel-accurate Google search page clone with embedded links and a fully responsive layout. Built as a deep-dive into replicating production-level UI from scratch."
+        data-stack="HTML,CSS"
+        data-link="https://suryanshk0920.github.io/googlepage/"
+        data-img="assets/ui.jpeg">
         <div class="work-item-left">
           <span class="work-num">04</span>
           <div>
@@ -154,18 +179,35 @@
     </div>
   </section>
 
+  <!-- ── PROJECT MODAL ── -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="projectModal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-img-wrap">
+        <img src="" alt="" id="modalImg">
+      </div>
+      <div class="modal-body">
+        <span class="modal-cat" id="modalCat"></span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-stack" id="modalStack"></div>
+        <a href="#" class="modal-link" id="modalLink" target="_blank">View Project ↗</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ── ABOUT ── -->
   <section id="about">
     <div class="about-grid">
       <div class="about-left">
         <h2 class="section-header">About</h2>
         <div class="about-img-wrap">
-          <img src="assets/profphoto.jpg" alt="Suryansh Kumar">
+          <img src="assets/panphoto.png" alt="Suryansh Kumar">
         </div>
       </div>
       <div class="about-right">
-        <p class="about-text">I build systems that combine machine learning with real-world applications. Computer vision, intelligent automation, backend infrastructure — the kind of work that solves actual problems, not just fills a GitHub profile.</p>
-        <p class="about-text">I've survived hackathons, shipped production systems, and learned that the hardest part of ML isn't the model — it's everything around it. I care more about building than talking.</p>
+        <p class="about-text">I build systems that combine machine learning with real-world applications. Computer vision, intelligent automation, backend infrastructure that solves actual problems.</p>
+        <p class="about-text">I've survived hackathons, shipped production systems, and learned that the hardest part of ML isn't the model. It's everything around it.</p>
 
         <div class="about-stats">
           <div class="stat">

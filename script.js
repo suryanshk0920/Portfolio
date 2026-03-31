@@ -25,8 +25,10 @@ window.addEventListener('scroll', () => {
 document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // ── MOBILE NAV ──
+const closeNav = () => document.body.classList.remove('nav-open');
 document.querySelector('.nav-toggle').addEventListener('click', () => document.body.classList.toggle('nav-open'));
-document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.body.classList.remove('nav-open')));
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeNav));
+document.getElementById('navOverlay').addEventListener('click', closeNav);
 
 // ── YEAR ──
 document.getElementById('year').textContent = new Date().getFullYear();
@@ -136,3 +138,29 @@ gsap.fromTo('#contact .section-header, .contact-email, .contact-links',
   { y: 0, opacity: 1, duration: 0.9, stagger: 0.15, ease: 'power3.out',
     scrollTrigger: { trigger: '#contact', start: 'top 80%' } }
 );
+
+// ── PROJECT MODAL ──
+const backdrop = document.getElementById('modalBackdrop');
+const closeModal = () => backdrop.classList.remove('open');
+
+document.querySelectorAll('.work-item').forEach(item => {
+  item.addEventListener('click', e => {
+    if (e.target.closest('a')) return;
+    const d = item.dataset;
+    document.getElementById('modalTitle').textContent = d.title;
+    document.getElementById('modalCat').textContent   = d.cat;
+    document.getElementById('modalDesc').textContent  = d.desc;
+    document.getElementById('modalImg').src           = d.img;
+    document.getElementById('modalImg').alt           = d.title;
+    const stack = document.getElementById('modalStack');
+    stack.innerHTML = d.stack.split(',').map(t => `<span>${t.trim()}</span>`).join('');
+    const link = document.getElementById('modalLink');
+    if (d.link) { link.href = d.link; link.classList.remove('hidden'); }
+    else { link.classList.add('hidden'); }
+    backdrop.classList.add('open');
+  });
+});
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
+backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
