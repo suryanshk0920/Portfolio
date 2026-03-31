@@ -1,22 +1,24 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // ── CURSOR ──
-const cursor = document.querySelector('.cursor');
-const follower = document.querySelector('.cursor-follower');
-let mx = 0, my = 0, fx = 0, fy = 0;
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
-});
-(function loop() {
-  fx += (mx - fx) * 0.1; fy += (my - fy) * 0.1;
-  follower.style.left = fx + 'px'; follower.style.top = fy + 'px';
-  requestAnimationFrame(loop);
-})();
-document.querySelectorAll('a, button, .service-card, .work-item').forEach(el => {
-  el.addEventListener('mouseenter', () => { cursor.classList.add('hovered'); follower.classList.add('hovered'); });
-  el.addEventListener('mouseleave', () => { cursor.classList.remove('hovered'); follower.classList.remove('hovered'); });
-});
+if (window.matchMedia('(pointer: fine)').matches) {
+  const cursor = document.querySelector('.cursor');
+  const follower = document.querySelector('.cursor-follower');
+  let mx = 0, my = 0, fx = 0, fy = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+  });
+  (function loop() {
+    fx += (mx - fx) * 0.1; fy += (my - fy) * 0.1;
+    follower.style.left = fx + 'px'; follower.style.top = fy + 'px';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a, button, .service-card, .work-item').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.classList.add('hovered'); follower.classList.add('hovered'); });
+    el.addEventListener('mouseleave', () => { cursor.classList.remove('hovered'); follower.classList.remove('hovered'); });
+  });
+}
 
 // ── BACK TO TOP ──
 window.addEventListener('scroll', () => {
@@ -28,6 +30,7 @@ document.getElementById('backTop').addEventListener('click', () => window.scroll
 const closeNav = () => document.body.classList.remove('nav-open');
 document.querySelector('.nav-toggle').addEventListener('click', () => document.body.classList.toggle('nav-open'));
 document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeNav));
+document.getElementById('navClose').addEventListener('click', closeNav);
 document.getElementById('navOverlay').addEventListener('click', closeNav);
 
 // ── YEAR ──
