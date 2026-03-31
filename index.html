@@ -1,232 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suryansh Kumar</title>
   <link rel="stylesheet" href="styles.css">
-  <title>Portfolio</title>
   <script src="https://kit.fontawesome.com/9d5be74e30.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-  <div id="header">
-    <div class="container">
-      <nav>
-        <!-- <img src="logo.png" class="logo" alt="Suryansh"> -->
-        <div class="logo"><span id="letter">S</span>uryansh.</div>
-        <ul>
-          <!-- <li>Suryansh</li> -->
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Hobbies</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <i class="fa-regular fa-circle-xmark"></i>
-        </ul>
-        <i class="fa-solid fa-bars"></i>
-      </nav>
-      <div class="header-text">
-        <div>Hi, My name is <span id="span-text">Suryansh</span></div>
-        <!-- <div>Suryansh</div> -->
-        <div>and I am a</div>
-        <!-- <div>Web Developer</div> -->
-        <span id="element"></span>
-      </div>
-<!-- ----------------about------------------>
-      <div id="about">
-        <div class="container">
-          <div class="row">
-            <div class="about-col-1">
-              <img src="profphoto.jpg" alt="">
-            </div>
-            <div class="about-col-2">
-              <h1 class="subtitle">About Me</h1>
-              <p>I'm passionate about web-development and love exploring the latest technologies in this field. I enjoy diving into web development as well, constantly expanding my skill set. I'm also a strong advocate for teamwork, often taking part in hackathons to collaborate, innovate, and push the boundaries of what's possible.</p>
 
-              <div class="tabtitles">
-                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                <p class="tab-links" onclick="opentab('education')">Education</p>
-              </div>
-
-              <div class="tab-contents active-tab" id="skills">
-                <ul>
-                  <li><span>UI/UX</span><br>Designing Web App Interfaces</li>
-                  <li><span>Web Development</span><br>Designing Web Apps</li>
-                  <li><span>Software Development</span><br>Designing Softwares and Apps</li>
-                </ul>
-              </div>
-              <div class="tab-contents" id="experience">
-                <ul>
-                  <li><span>2018 - 2019</span><br>Explored basics of webdev.</li>
-                  <li><span>2019 - 2021</span><br>Completed html css and js.</li>
-                  <li><span>2021 - Current</span><br>Exploring Full Stack webdev. </li>
-                </ul>
-              </div>
-              <div class="tab-contents" id="education">
-                <ul>
-                  <li><span>2018 - 2019</span><br>High School</li>
-                  <li><span>2019 - 2021</span><br>Higher Secondary School</li>
-                  <li><span>2023 - Current</span><br>Pursuing BCA from Parul University</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-<!-- ----------------------------hobbies--------------------------------- -->
-<div id="services"></div>
-      <div class="container">
-        <h1 class="sub-title">My Hobbies</h1>
-        <div class="services-list">
-          <div>
-            <i class="fa-solid fa-code"></i>
-            <h2>Web Design</h2>
-            <p>New in this field and trying to learn new libraries for animating the webpages.</p>
-            <a href="#">Learn More</a>
-          </div>
-          <div>
-            <i class="fa-sharp fa-solid fa-crop-simple"></i>
-            <h2>AI / ML</h2>
-            <p>Learned a lot of new things and models, made a Electronic Health Records Management system for a hackathon. Still exploring how to integrate it with web development and working on a new cybercrime complaints classification model.</p>
-            <a href="#">Learn More</a>
-          </div>
-          <div>
-            <i class="fa-brands fa-android"></i>
-            <h2>App Development</h2>
-            <p>Didn't do much work in here, explored flutter and dart and for now it is kept on hold.</p>
-            <a href="#">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-      <!-- ----------------portfolio------------------ -->
-
-    <div id="portfolio">
-      <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="worklist">
-          <div class="work">
-            <img src="webdev.jpg" alt="">
-            <div class="layer">
-              <h3>Dynamic Login Form</h3>
-              <p>This website consists of dynamic components to show login and register options for the user.</p>
-              <a href="https://suryanshk0920.github.io/Loginwebsite/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="webdev.jpg" alt="">
-            <div class="layer">
-            <h3>Search Engine Clone</h3>
-            <p>This is a basic search engine embedded website which contains different other links to websites.</p><a href="https://suryanshk0920.github.io/googlepage/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-          </div>
-          <div class="work">
-            <img src="webdev.jpg" alt="">
-            <div class="layer">
-            <h3>Weather App</h3>
-            <p>A simple Web App to display the weather conditions of any city you want.</p>
-            <a href="https://suryanshk0920.github.io/weather-app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-          </div>
-        </div>
-        <a href="#" class="btn">SEE MORE</a>
-      </div>
-    </div>
-      <!-- --------------------contact---------------------------------------------- -->
-    <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>
-            <p><i class="fa-solid fa-paper-plane"></i> suryanshkumar0903@gmail.com</p>
-            <p><i class="fa-solid fa-square-phone"></i> +91 7043461020</p>
-            <div class="social-icons">
-              <a href=""><i class="fa-brands fa-instagram" target=_blank></i></a>
-              <a href="https://www.linkedin.com/in/suryansh-kumar-569338280/" target=_blank><i class="fa-brands fa-linkedin" target=_blank></i></a>
-              <a href="https://github.com/suryanshk0920" target=_blank><i class="fa-brands fa-github"></i></a>
-              <a href="https://discordapp.com/users/1142840126079254569
-              "target=_blank><i class="fa-brands fa-discord"></i></a>
-            </div>
-            <a href="" class="btn btn2">DOWNLOAD CV</a>
-          </div>
-          <div class="contact-right">
-            <form>
-              <input type="text" name="Name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <button onclick="scrollToTop()" class="back-to-top" id="backToTopBtn"><i class="fa-solid fa-angle-up"></i></button>
-      <div class="copyright">
-        <p><p>Copyright &copy; <span id="currentYear"></span> Suryansh Kumar. All rights reserved.</p></p>
-      </div>
-    </div>
+  <!-- ── AMBIENT BACKGROUND ── -->
+  <div class="ambient-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="noise"></div>
   </div>
 
+  <!-- ── CURSOR ── -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
 
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <div class="nav-logo">SURYANSH</div>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <h1 class="hero-title">
+      <div class="mask"><span>Crafting</span></div>
+      <div class="mask"><span>Digital</span></div>
+      <div class="mask"><span class="dim">Experiences</span></div>
+    </h1>
+    <div class="hero-bio">
+      <p class="bio-line">I'm <strong>Suryansh</strong>. A CS student at <strong>Parul University</strong>.</p>
+      <p class="bio-line">Blurring the line between UI/UX and Full-Stack Engineering.</p>
+      <div class="tech-pills bio-line">
+        <span>React</span><span>Node.js</span><span>Python</span><span>Three.js</span>
+      </div>
+    </div>
+  </section>
 
+  <!-- ── SERVICES ── -->
+  <section id="services">
+    <div class="service-card" id="sc1">
+      <div class="card-content">
+        <div class="svc-icon">✦</div>
+        <h3>01</h3>
+        <h4>Interface Design</h4>
+        <p>Focusing on micro-interactions and clean aesthetics. Every pixel has a purpose.</p>
+      </div>
+    </div>
+    <div class="service-card" id="sc2">
+      <div class="card-content">
+        <div class="svc-icon">⚡</div>
+        <h3>02</h3>
+        <h4>Development</h4>
+        <p>Building full-stack web apps with React, Node.js, PostgreSQL and modern tooling.</p>
+      </div>
+    </div>
+    <div class="service-card" id="sc3">
+      <div class="card-content">
+        <div class="svc-icon">◎</div>
+        <h3>03</h3>
+        <h4>Motion</h4>
+        <p>Adding life to interfaces with GSAP, Three.js and scroll-driven animations.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- ── WORK ── -->
+  <section id="work">
+    <h2 class="section-header">Selected Works</h2>
 
+    <div class="work-list">
 
+      <div class="work-item" data-index="01">
+        <div class="work-item-left">
+          <span class="work-num">01</span>
+          <div>
+            <h3 class="work-title">Event Tracker</h3>
+            <span class="work-cat">Full-Stack · Web App</span>
+          </div>
+        </div>
+        <div class="work-item-tags">
+          <span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>Redis</span>
+        </div>
+        <a href="https://github.com/suryanshk0920/event-tracker" target="_blank" class="work-arrow">↗</a>
+        <div class="work-preview">
+          <img src="image.png" alt="Event Tracker">
+        </div>
+      </div>
 
+      <div class="work-item" data-index="02">
+        <div class="work-item-left">
+          <span class="work-num">02</span>
+          <div>
+            <h3 class="work-title">Dynamic Login Form</h3>
+            <span class="work-cat">Frontend · UI</span>
+          </div>
+        </div>
+        <div class="work-item-tags">
+          <span>HTML</span><span>CSS</span><span>JS</span>
+        </div>
+        <a href="https://suryanshk0920.github.io/Loginwebsite/" target="_blank" class="work-arrow">↗</a>
+        <div class="work-preview">
+          <img src="webdev.jpg" alt="Login Form">
+        </div>
+      </div>
 
+      <div class="work-item" data-index="03">
+        <div class="work-item-left">
+          <span class="work-num">03</span>
+          <div>
+            <h3 class="work-title">Weather App</h3>
+            <span class="work-cat">Frontend · API</span>
+          </div>
+        </div>
+        <div class="work-item-tags">
+          <span>JavaScript</span><span>REST API</span>
+        </div>
+        <a href="https://suryanshk0920.github.io/weather-app/" target="_blank" class="work-arrow">↗</a>
+        <div class="work-preview">
+          <img src="app.jpeg" alt="Weather App">
+        </div>
+      </div>
 
-  <script>
+      <div class="work-item" data-index="04">
+        <div class="work-item-left">
+          <span class="work-num">04</span>
+          <div>
+            <h3 class="work-title">Search Engine Clone</h3>
+            <span class="work-cat">Frontend · UI</span>
+          </div>
+        </div>
+        <div class="work-item-tags">
+          <span>HTML</span><span>CSS</span>
+        </div>
+        <a href="https://suryanshk0920.github.io/googlepage/" target="_blank" class="work-arrow">↗</a>
+        <div class="work-preview">
+          <img src="ui.jpeg" alt="Search Engine">
+        </div>
+      </div>
 
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    </div>
+  </section>
 
-    function opentab(tabname){
-      for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-      }
-      for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-left">
+        <h2 class="section-header">About</h2>
+        <div class="about-img-wrap">
+          <img src="profphoto.jpg" alt="Suryansh Kumar">
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="about-text">I'm a full-stack developer and UI/UX enthusiast currently pursuing BCA at Parul University. I love building things that live on the internet — from clean interfaces to complex backend systems.</p>
+        <p class="about-text">I've competed in hackathons, built AI/ML models, and shipped real products. I believe great software is equal parts engineering and design.</p>
 
-  </script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="5">0</span><span class="accent">+</span>
+            <p>Years Learning</p>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="10">0</span><span class="accent">+</span>
+            <p>Projects Built</p>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="3">0</span><span class="accent">+</span>
+            <p>Hackathons</p>
+          </div>
+        </div>
 
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Web Developer.', 'UI/UX Designer.', 'Tech Enthusiast.'],
-      typeSpeed: 50,
-    });
-  </script>
-  <script>
-    document.getElementById("currentYear").innerText = new Date().getFullYear();
-</script>
+        <div class="tab-nav">
+          <button class="tab-btn active" data-tab="skills">Skills</button>
+          <button class="tab-btn" data-tab="experience">Experience</button>
+          <button class="tab-btn" data-tab="education">Education</button>
+        </div>
 
-<script>
-  // Function to scroll to the top of the page
-  function scrollToTop() {
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth' // Smooth scroll animation
-      });
-  }
+        <div class="tab-panel active" id="skills">
+          <div class="skill-item">
+            <div class="skill-info"><span>Web Development</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>UI/UX Design</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>AI / ML</span><span>65%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+          </div>
+        </div>
+        <div class="tab-panel" id="experience">
+          <div class="timeline">
+            <div class="tl-item"><span class="tl-year">2018–2019</span><p>Explored basics of web development</p></div>
+            <div class="tl-item"><span class="tl-year">2019–2021</span><p>Completed HTML, CSS & JavaScript</p></div>
+            <div class="tl-item"><span class="tl-year">2021–Now</span><p>Exploring Full Stack development</p></div>
+          </div>
+        </div>
+        <div class="tab-panel" id="education">
+          <div class="timeline">
+            <div class="tl-item"><span class="tl-year">2018–2019</span><p>High School</p></div>
+            <div class="tl-item"><span class="tl-year">2019–2021</span><p>Higher Secondary School</p></div>
+            <div class="tl-item"><span class="tl-year">2023–Now</span><p>BCA — Parul University</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  // Show/hide the back-to-top button based on scroll position
-  window.addEventListener('scroll', function() {
-      var backToTopBtn = document.getElementById('backToTopBtn');
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <h2 class="section-header">Let's Talk</h2>
+    <a href="mailto:suryanshkumar0903@gmail.com" class="contact-email">suryanshkumar0903@gmail.com</a>
+    <div class="contact-links">
+      <a href="https://github.com/suryanshk0920" target="_blank">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/suryansh-kumar-569338280/" target="_blank">LinkedIn ↗</a>
+      <a href="https://discordapp.com/users/1142840126079254569" target="_blank">Discord ↗</a>
+    </div>
+  </section>
 
-      if (window.scrollY > 300) { // Adjust this value to control when the button appears
-          backToTopBtn.style.display = 'block';
-      } else {
-          backToTopBtn.style.display = 'none';
-      }
-  });
-</script>
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>© <span id="year"></span> Suryansh Kumar</span>
+    <span>Built with passion</span>
+  </footer>
 
+  <!-- ── BACK TO TOP ── -->
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
